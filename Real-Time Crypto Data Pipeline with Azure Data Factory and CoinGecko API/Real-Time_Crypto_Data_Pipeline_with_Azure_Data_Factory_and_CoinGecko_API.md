@@ -4,38 +4,21 @@
 
 This project demonstrates how to build an end-to-end ETL pipeline using Azure Data Factory (ADF) to extract live cryptocurrency market data from the CoinGecko REST API, transform the JSON response, and store the results in an Azure SQL Database. Configure an automated trigger in Azure Data Factory to extract data from the CoinGecko API on an hourly schedule and update the records in the Azure SQL Database
 
-## Project Objectives 
-- Connect Azure Data Factory to the CoinGecko REST API
+### Project Goal: Fetch live crypto market data (top 100 coins by market cap) from CoinGecko API and transform the json file and store it in Azure SQL DB  
 
-- Extract and parse JSON data from the API
+## Step 1: Create CoinGeko Account and request AKI Key
 
-- Flatten nested fields using Mapping Data Flows
-
-- Store the transformed data in Azure SQL Database
-
-- Trigger pipeline execution hourly for real-time ingestion
-
-## Tools & Technologies:
-- Azure Data Factory
-
-- CoinGecko REST API
-
-- Azure SQL Database
-
-- Mapping Data Flow (in ADF)
-
-- Azure Key Vault (optional for API key)
+- Create an account and login to the CoinGeko  https://www.coingecko.com/
+- Go to 'View Developer Dashboard' and create a new API Key (**Note One API Key allowed per Demo account**) (insert image 1)
+- Here is the documnetation for creating an API Key https://support.coingecko.com/hc/en-us/articles/21880397454233-User-Guide-How-to-sign-up-for-CoinGecko-Demo-API-and-generate-an-API-key (insert image 2)
+- The Root Url is mentioned in the documentation 
 
 
-## Skills Demonstrated:
-- Building pipelines in ADF
+## Step2: Create Azure SQl Database and configure the Database table using Azure Data Studio
 
-- REST API integration
+- Create the Azure SQL Database in the Azure Portal
+- Once our Database is created select 'Open in Azure Data Studio' (Insert image 3)
+- Connect to your database use your SQL credentials and create out table which will hold our CoinGeko Rest API data (insert image 4)
 
-- JSON flattening with Mapping Data Flows
 
-- Copying data to Azure SQL Database
-
-- Dynamic content and parameterization
-
-- Scheduling with triggers
+## Step 3: Configure Azure Data Factory to ingest the Data from CoinGeko and store it in our Azure SQL Database
