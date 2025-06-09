@@ -36,11 +36,19 @@ This project demonstrates how to build an end-to-end ETL pipeline using Azure Da
 
 ### Create Linked Service ADF - Azure SQL Database
 - Select create a new linked service and select Azure SQL Database
-- Insert image7)
+- (Insert image7)
 - Fill in the details AZ subcription, server aname and the table we created earlier and fill in your username and password for your AZ SQL DB
 - **Note: make sure your endpoint is added to the firewall rules**
 - Test connection
-- Insert image 8
+- (Insert image 8)
 
-### Create ADF Pipeline
+### Create Datasets for the CoinGeko REST API and Azure SQL Database
 - 
+### Create ADF Pipeline
+- Author -> New Pipeline -> Select Copy
+- Under Move and Transform --> Drag Copy Data onto the canvas
+- In the Source tab Select the Linked Service for the CoinGecko Rest API
+- Select 'Get' for Request Method (It is defualt but make sure its selected)
+- (Insert Image 9)
+- In the Sink tab select the Azure SSQL DB linked service
+- (Insert Image 10)
