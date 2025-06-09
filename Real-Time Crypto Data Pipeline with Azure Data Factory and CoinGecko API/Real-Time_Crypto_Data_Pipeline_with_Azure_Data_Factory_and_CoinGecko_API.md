@@ -22,3 +22,16 @@ This project demonstrates how to build an end-to-end ETL pipeline using Azure Da
 
 
 ## Step 3: Configure Azure Data Factory to ingest the Data from CoinGeko and store it in our Azure SQL Database
+
+### Create Linked services ADF - CoinGeko API 
+- Create a linked service or your CoinGeko Rest API inside Azure Data Factory
+- Open Linked services and select Rest (insert Image 5)
+- Add our base URL -> https://api.coingecko.com/api/v3
+- Authentication Type: select Anonymous
+- In Auth Headers select 'API' from the drop down list
+- Enter your API key here or Connect to Azure Key Valut were your API secret is stored (**this will require another linked service with ADF**)
+- Run a Test Connection and confirm it is working
+- (Insert image 6)
+  
+
+### Create Linked Service ADF - Azure SQL Database
