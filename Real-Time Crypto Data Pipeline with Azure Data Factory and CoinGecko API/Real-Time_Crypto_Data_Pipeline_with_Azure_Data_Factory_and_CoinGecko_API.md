@@ -35,3 +35,12 @@ This project demonstrates how to build an end-to-end ETL pipeline using Azure Da
   
 
 ### Create Linked Service ADF - Azure SQL Database
+- Select create a new linked service and select Azure SQL Database
+- Insert image7)
+- Fill in the details AZ subcription, server aname and the table we created earlier and fill in your username and password for your AZ SQL DB
+- **Note: make sure your endpoint is added to the firewall rules**
+- Test connection
+- Insert image 8
+
+### Create ADF Pipeline
+- 
